@@ -31,20 +31,22 @@ $("#contacts").click(function() { //when "contacts" is clicked
     listContacts();
 });
 
+//When the add contact button is clicked, hide the contacts and dialer tabs
+$("#add").click(function() { //when "add contacts" is clicked
+    $("#dialerContent").hide(); //hide dial element
+    $("#contactsContent").hide();
+    $("#addContent").show();
+    $("#gesturesContent").hide();
+
+
+});
+
 //When the gestures button is clicked, hide all other tabs
-$("#contacts").click(function() { //when "contacts" is clicked
+$("#gestures").click(function() { //when "contacts" is clicked
     $("#dialerContent").hide();
     $("#contactsContent").hide();
     $("#addContent").hide();
     $("#gesturesContent").show();
-});
-
-//When the add contact button is clicked, hide the contacts and dialer tabs
-$("#gestures").click(function() { //when "add contacts" is clicked
-    $("#dialerContent").hide(); //hide dial element
-    $("#contactsContent").hide();
-    $("#addContent").show();
-
 });
 
 
