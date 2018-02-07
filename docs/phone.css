@@ -43,5 +43,5 @@ button { background: gray; color: black; width: 150px; }
 
 /*GESTURES TEST TAB*/
 
-.gesture-output {width: 300px; font-size: Large; }
-.gestureBox {width: 400px; height: 400px; background: silver; }
+#gesture-output {width: 300px; font-size: Large; }
+#gestureBox {width: 400px; height: 400px; background: silver; }

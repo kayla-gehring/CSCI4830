@@ -50,6 +50,7 @@ $("#gestures").click(function() { //when "contacts" is clicked
 });
 
 
+
 /* DIALER BUTTON CONTROL */
 //When button is pressed, perform relevant action on dialer text input field
 function inputNum(element){
@@ -64,10 +65,15 @@ function listContacts(){
     //list of names generated at listofrandomnames.com
     var contacts = ["Archie Reeb", "Marc Flavell", "Kasey Burr", "Katharyn Lanford", "Sharilyn Krohn", "Eda Brinkmann", "Neida Stlouis", "Ranee Maltby", "Tod Bottomley","Margit Mazzola"];
     $("#contactsContent").html("<strong style='font-size: 150%'>Contact List</strong>")
-
     for(var i=0; i<contacts.length; i++){
         $("#contactsContent").append("<div>");
         $("#contactsContent").append("<button class='contactsList pure-button'>"+contacts[i]+ "</button>");
         $("#contactsContent").append("</div>");
     }
 };
+
+
+/*UI EVENTS ON GESTURES TAB*/
+$("#gestureBox").click(function() {
+    alert("clicked in gesture area");
+});
