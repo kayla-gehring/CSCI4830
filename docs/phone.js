@@ -40,7 +40,7 @@ $("#contacts").click(function() { //when "contacts" is clicked
 });
 
 //When the add contact button is clicked, hide the contacts and dialer tabs
-$("#add").click(function() { //when "add contacts" is clicked
+$("#gestures").click(function() { //when "add contacts" is clicked
     $("#dialerContent").hide(); //hide dial element
     $("#contactsContent").hide();
     $("#addContent").show();
