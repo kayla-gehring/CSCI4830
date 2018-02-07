@@ -1,15 +1,15 @@
 /*ENTIRE DOCUMENT*/
-/* make all buttons 20x40 pixels with black text, gray background, 10 pixel margin */
-button { background: gray; color: black; width: 150px; }
 
-/* make all buttons in class tab-buttons have no margin*/
-.tab-buttons { margin: 0px; }
+/* style all buttons */
+button { background: gray; color: black; width: 150px;}
 
-/* make all divs in class tabContents centered under tab bar */
-#contents { width: 450px; }
-.dialerForm { left-margin: auto; right-margin: auto; width: 405px; }
+.pure-button-group .tab-buttons {margin-bottom: 0px; margin-top: 5px; margin-left: 5px; }
 
+/* make tab bar background silver */
+#tabs { background: silver; }
 
+/*give contents div a bit of padding*/
+#contents { padding: 10px; }
 /*DIALER TAB */
 
 /* style dialer buttons */
@@ -38,10 +38,10 @@ button { background: gray; color: black; width: 150px; }
 .add-form { width: 400px; font-size: Large; }
 
 /* make the button with ID "add-reset" red */
-.add-clear { width: 200px; font-size: Large; }
+.add-clear { width: 185px; font-size: Large; margin: 10px;}
 #add-reset { background: red; }
 
 /*GESTURES TEST TAB*/
 
-#gesture-output {width: 300px; font-size: Large; }
-#gestureBox {width: 400px; height: 400px; background: silver; }
+#gesture-output {margin: 10px; width: 400px; font-size: Large; text-align: center;}
+#gestureBox {margin: 10px; width: 400px; height: 400px; background: silver; }

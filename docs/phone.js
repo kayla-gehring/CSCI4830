@@ -10,6 +10,8 @@ $(document).ready(function() { //do this when the document is loaded
     $("#contactsContent").hide(); //hide the element with ID "contacts"
     $("#addContent").hide(); //hide the element with ID "add"
     $("#gesturesContent").hide();
+
+    listContacts();
 });
 
 
@@ -27,8 +29,6 @@ $("#contacts").click(function() { //when "contacts" is clicked
     $("#contactsContent").show();
     $("#addContent").hide();
     $("#gesturesContent").hide();
-
-    listContacts();
 });
 
 //When the add contact button is clicked, hide the contacts and dialer tabs
@@ -74,6 +74,83 @@ function listContacts(){
 
 
 /*UI EVENTS ON GESTURES TAB*/
-$("#gestureBox").click(function() {
-    alert("clicked in gesture area");
+var downX = 0;
+var downY = 0;
+
+//mouse down
+$("#gestureBox").mousedown(function(event) {
+    $("#gesture-output").val("Mouse Down");
+    downX = event.pageX;
+    downY = event.pageY;
 });
+//mouse up, swipe motions
+$("#gestureBox").mouseup(function(event) {
+
+    var diffX = event.pageX - downX;
+    var diffY = event.pageY - downY;
+    //clear text box
+    $("#gesture-output").val("");
+
+    //mouse up
+    if ((Math.abs(diffX) < 5) && (Math.abs(diffY) < 5))
+        $("#gesture-output").val("Mouse Up");
+    //swipe gestures
+    else{
+        if (diffX > 5)
+            $("#gesture-output").val("Swipe Right");
+        else if (diffX < -5)
+            $("#gesture-output").val("Swipe Left");
+
+        if ((Math.abs(diffX)>5 && Math.abs(diffY)>5))
+            $("#gesture-output").val($("#gesture-output").val()+" and ");
+
+        if (diffY < -5)
+            $("#gesture-output").val($("#gesture-output").val()+"Swipe Up");
+        else if (diffY > 5)
+            $("#gesture-output").val($("#gesture-output").val()+"Swipe Down");
+
+    }
+
+});
+
+/*SWITCH TABS WITH KEYBOARD*/
+// reference: https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key
+window.addEventListener("keydown", function(event) {
+    if (event.defaultPrevented)
+        return;
+
+    switch (event.key) {
+    case "ArrowLeft":
+        switchTabs("left")
+        return;
+    case "ArrowRight":
+        switchTabs("right");
+        return;
+    default:
+        return;
+    }
+});
+
+function switchTabs (direction) {
+    var tab = ["#dialerContent", "#contactsContent", "#addContent", "#gesturesContent"];
+
+    //change active tab
+    for (var i=0; i < tab.length; i++){
+        if ($(tab[i]).is(':visible')){
+            if (direction == "left"){
+                if (i == 0)
+                    $(tab[tab.length-1]).show();
+                else
+                    $(tab[i-1]).show();
+            }
+            else if (direction == "right"){
+                if (i == (tab.length-1))
+                    $(tab[0]).show();
+                else
+                    $(tab[i+1]).show();
+            }
+            $(tab[i]).hide();
+            return;
+        }
+    }
+}
