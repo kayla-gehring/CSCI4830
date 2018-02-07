@@ -40,3 +40,8 @@ button { background: gray; color: black; width: 150px; }
 /* make the button with ID "add-reset" red */
 .add-clear { width: 200px; font-size: Large; }
 #add-reset { background: red; }
+
+/*GESTURES TEST TAB*/
+
+.gesture-output {width: 300px; font-size: Large; }
+.gestureBox {width: 400px; height: 400px; background: silver; }

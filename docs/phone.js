@@ -9,6 +9,7 @@ $(document).ready(function() { //do this when the document is loaded
     $("#dialerContent").show(); //show the HTML element with ID "dialer"
     $("#contactsContent").hide(); //hide the element with ID "contacts"
     $("#addContent").hide(); //hide the element with ID "add"
+    $("#gesturesContent").hide();
 });
 
 
@@ -17,6 +18,7 @@ $("#dialer").click(function() { //when "dialer" is clicked
     $("#dialerContent").show(); //show dial element
     $("#contactsContent").hide(); //hide other elements
     $("#addContent").hide();
+    $("#gesturesContent").hide();
 });
 
 //When the contacts button is clicked, hide the dialer and add contact tabs
@@ -24,8 +26,17 @@ $("#contacts").click(function() { //when "contacts" is clicked
     $("#dialerContent").hide();
     $("#contactsContent").show();
     $("#addContent").hide();
+    $("#gesturesContent").hide();
 
     listContacts();
+});
+
+//When the gestures button is clicked, hide all other tabs
+$("#contacts").click(function() { //when "contacts" is clicked
+    $("#dialerContent").hide();
+    $("#contactsContent").hide();
+    $("#addContent").hide();
+    $("#gesturesContent").show();
 });
 
 //When the add contact button is clicked, hide the contacts and dialer tabs
