@@ -1,0 +1,10 @@
+/*hide aria alert until no longer hidden*/
+.hidden {
+    display: none;
+}
+
+/*change color of alert*/
+.comment-alert {
+    color: red;
+}
+/*page styling*/

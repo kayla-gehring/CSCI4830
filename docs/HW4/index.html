@@ -1,6 +1,12 @@
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Skates</title>
+
+    <!-- Pure CSS import -->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    <!-- Reference to CSS file -->
+    <link rel="stylesheet" href = "blog.css">
+
   </head>
 
   <body>
@@ -47,7 +53,8 @@
       <img
         alt="My team, the Boulder County Bombers"
       src="https://scontent-ort2-2.xx.fbcdn.net/v/t1.0-9/26804536_1824726914205422_6973940528165717451_n.jpg?oh=b8d1137a24122f5af7a075a526c9afeb&oe=5B17ACC3"
-        />
+        /><br>
+      <p>Image from Boulder County Bombers facebook page.</p>
 
       <!-- User comment form -->
       <div>
@@ -60,15 +67,24 @@
           <input id="email" type="text"><br>
 
           <label for="comment">Comments or questions:</label>
-          <input id="comment" type="text">
+          <input id="comment" type="text"><br>
 
-          <button>Submit</button>
+          <button class="pure-form button-success" id="submit-button" >Submit</button>
+        </div>
+
+        <div id="comment-submitted" role="alert" class="hidden">
+          Your comment has been submitted.
         </div>
 
       </div>
 
 
     </div>
+
+    <!-- JQuery import -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Reference to JS file -->
+    <script src="blog.js"></script>
 
 
   </body>
