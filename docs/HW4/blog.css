@@ -5,6 +5,13 @@
 
 /*change color of alert*/
 .comment-alert {
-    color: red;
+    color: green;
+    font-weight: bold;
 }
+
 /*page styling*/
+#menu {
+    height: 20%;
+    border-style: solid;
+    postion: fixed;
+}

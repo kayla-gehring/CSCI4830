@@ -5,14 +5,14 @@
     <!-- Pure CSS import -->
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
     <!-- Reference to CSS file -->
-    <link rel="stylesheet" href = "blog.css">
+    <link rel="stylesheet" href="blog.css">
 
   </head>
 
   <body>
 
     <!-- Site Menu -->
-    <div>
+    <div id="menu">
       <!-- Has "links" with home, archive, about, including Aria roles -->
       <h1>Blog Navigation</h1>
       <ul>
@@ -22,7 +22,7 @@
     </div>
 
     <!-- Blog Content -->
-    <div>
+    <div id="main-content">
       <!-- Top Level Heading for Blog -->
       <h1>My Favorite Activity: Skating</h1>
       <p>I got my first pair of skates when I was three years old, and haven't been able to keep wheels off my feet since.</p>
@@ -57,7 +57,7 @@
       <p>Image from Boulder County Bombers facebook page.</p>
 
       <!-- User comment form -->
-      <div>
+      <div id="comments-content">
         <h1>Comments</h1>
         <div>
           <label for="name">Your name:</label>
@@ -73,7 +73,7 @@
         </div>
 
         <div id="comment-submitted" role="alert" class="hidden">
-          Your comment has been submitted.
+          <p class="comment-alert">Your comment has been submitted.</p>
         </div>
 
       </div>
