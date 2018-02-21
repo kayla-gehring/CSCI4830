@@ -1,111 +1,74 @@
-<!-- Input, Interaction, and Accessibility. Spring 2018, Assignment 1 -->
-
-<html>
-
-
-
+<html lang="en">
   <head>
-
-    <title>Sample Dialer and Contact List</title>
-
-    <!-- Pure CSS import -->
-    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
-    <!-- Reference to CSS file -->
-    <link rel="stylesheet" href = "phone.css">
-
+    <title>Title</title>
   </head>
+
   <body>
 
-
-    <!-- interface tabs-->
-    <div class="tab-buttons" id="tabs">
-
-      <!-- buttons/tabs -->
-      <button class="tab-buttons" id="dialer">Call</button>
-      <button class="tab-buttons" id="contacts">Contacts</button>
-      <button class="tab-buttons" id="add">Add Contact</button>
-      <button class="tab-buttons" id="gestures">Test Gestures</button>
-    </div>
-    <!-- Tab contents -->
-    <div class="tabContents-all" id="contents">
-
-      <!-- Tab 1 Contents: Dialer -->
-      <div class="tabContents" id="dialerContent">
-        <form class="pure-form pure-form-stacked" id="dialerForm">
-
-          <!-- Dial Input Box -->
-          <label for="dialer-box" id="dialer-box-label">
-            <p><strong style="font-size:150%" color="black">Enter Phone Number</strong></p>
-          </label>
-          <input type="text" class="dialer-content" id="dialer-box" placeholder="123-456-7890" value="">
-
-        <!-- Dial Buttons -->
-        <div class="dialer-content" id="buttons1-3">
-          <button type="button" class="number-buttons pure-button" value="1" onclick="inputNum(this)">1</button>
-          <button type="button" class="number-buttons pure-button" value="2" onclick="inputNum(this)">2</button>
-          <button type="button" class="number-buttons pure-button" value="3" onclick="inputNum(this)">3</button>
-        </div>
-        <div class="dialer-content" id="buttons4-6">
-          <button type="button" class="number-buttons pure-button" value="4" onclick="inputNum(this)">4</button>
-          <button type="button" class="number-buttons pure-button" value="5" onclick="inputNum(this)">5</button>
-          <button type="button" class="number-buttons pure-button" value="6" onclick="inputNum(this)">6</button>
-        </div>
-        <div class="dialer-content" id="buttons*0#">
-          <button type="button" class="number-buttons pure-button" value="*" onclick="inputNum(this)">*</button>
-          <button type="button" class="number-buttons pure-button" value="0" onclick="inputNum(this)">0</button>
-          <button type="button" class="number-buttons pure-button" value="#" onclick="inputNum(this)">#</button>
-        </div>
-        <!-- Action Buttons -->
-        <div class="dialer-content">
-          <button type="submit" class="dial-clear pure-button pure-button-primary" id="dial-button">Dial Number</button>
-          <button type="clear" form="dialerForm" class="dial-clear pure-button pure-button-primary" id="clear-button">Clear Input</button>
-        </div>
-        </form>
-      </div>
-
-      <!-- Tab 2 Contents: Contact List -->
-      <div class="tabContents" id="contactsContent">Contact List</div>
-      <!-- Contact buttons added using javascript -->
-
-      <!-- Tab 3 Contents: Add Contact Form -->
-      <div class="tabContents" id="addContent">
-         <p><strong style="font-size:200%">Add Contact</strong></p>
-      <form class="pure-form pure-form-stacked">
-        <div class="pure-control-group">
-          <label for="add-name" class="add-label">Name</label>
-          <input class="add-form" id="add-name" type="text" placeholder="John Smith">
-        </div>
-        <div class="pure-control-group">
-          <label class="add-label" for="add-number">Phone Number</label>
-          <input class="add-form" id="add-number" type="text" placeholder="123-456-7890">
-        </div>
-        <div class="pure-control-group">
-          <label for="add-email" class="add-label">Email Address</label>
-          <input class="add-form" id="add-email" type="text" placeholder="john.smith@domain.com">
-        </div>
-        <div class="pure-control-group">
-          <button class="add-clear pure-button pure-button-primary" type="submit" value="Submit" id="add-submit">Create Contact</button>
-          <button class="add-clear pure-button pure-button-primary" type="reset" value="Reset" id="add-reset">Reset</button>
-          </div>
-      </form>
-
-      </div>
-      <!-- Tab 4 Contents: Test Gestures -->
-      <div class="tabContents" id="gesturesContent">
-        <p><strong style="font-size:200%">Gesture Practice</strong></p>
-
-        <form class="pure-form pure-form stacked">
-          <div class="gesturesInput">
-            <input id="gesture-output" type="text" placeholder="ready">
-          </div>
-          <div class="gesturesInput" id="gestureBox"></div>
-
+    <!-- Site Menu -->
+    <div>
+      <!-- Has "links" with home, archive, about, including Aria roles -->
+      <h1>Blog Navigation</h1>
+      <ul>
+        <li><a href="kayla-gehring.github.io/CSCI4830/HW4">Home</a></li>
+        <li><a href="kayla-gehring.github.io/CSCI4830/HW4">Archive</a></li>
+        <li><a href="kayla-gehring.github.io/CSCI4830/HW4">About</a></li>
     </div>
 
-    <!-- JQuery import -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- Reference to JS file -->
-    <script src="phone.js"></script>
+    <!-- Blog Content -->
+    <div>
+      <!-- Top Level Heading for Blog -->
+      <h1>My Favorite Activity: Skating</h1>
+      <p>I got my first pair of skates when I was three years old, and haven't been able to keep wheels off my feet since.</p>
+
+      <!-- Subsection 1-->
+      <h2>Childhood</h2>
+      <p>That first pair of skates I was given where quads, but I switched to inlines early enough I don't even remember using quad skates. I don't even remember being taught to skate, though I remember many nights at the roller rink, zipping around on my inline skates.</p>
+
+      <p>By the time I was in 4th grade, I would spend literal hours skating up and down the block my house was on. I had a Sony walkman that I would listen to while I skated. I knew most people in the neighborhood, thanks to my being outside alone so often, especially the elderly couples whom I loved to chat with about how school was going. Sometimes I would skate with my best friend and play make-believe, but she travelled a lot with her parents. </p>
+
+      <!-- Subsection 2-->
+      <h2>A Brief Foray to Ice Skates</h2>
+      <p>At 12 years old, my dad suggested I try figure skating. I remember passing through the first 4 levels of the classes as fast as was possible, because I was so comfortable on skates already. By the time they started teaching me to spin, however, I got bored. At the time, I just wanted to go fast and listen to music. I wasn't interested in spending hours learning how to do anything fancy.</p>
+
+      <p>Around that time, I was old enough to be allowed to go to the park on my own. So I would spend hours trail skating, instead of spending hours going in a large circle around my block.</p>
+
+      <!-- Subsection 3-->
+      <h2>Roller Derby</h2>
+      <p>When I was 18, I joined the Air Force. For a couple of years, I couldn't skate very often. I had been stationed in Germany, and most roads in the village I lived in were made of brick - not a very conducive surface for skating. But then a Staff Sergeant in my squadron, whom I had mentioned my love of skating to, suggested I check out a roller derby team with her.</p>
+
+      <p>At first, roller derby was really scary for me. I wanted to play, but the contact aspect of the sport was a little too frightening to get me to commit. Having to switch back to quads for the first time since I was 4 wasn't very easy for me, either. It wasn't until I was stationed in California, and the founder of a local derby team approached me while trail skating, that I started to discover how strong a fit roller derby really was for me.</p>
+
+      <p>In California, skating with Flood Water Roller Derby, I learned the basics of roller derby and got over (most) of my fear of contact. I only skated with the team for a year or so, however, before my four-year enlistment was over. I moved back home, to Colorado. It took me a year and a half to find my next league, but I did eventually go back to derby.</p>
+
+      <p>I've been skating with the Boulder County Bombers, now, for about 3 years. The challenge, teamwork, and time on skates are my favorite moments of just about every week.</p>
+      <!-- Table of my teams? -->
+
+      <img
+        alt="My team, the Boulder County Bombers"
+      src="https://scontent-ort2-2.xx.fbcdn.net/v/t1.0-9/26804536_1824726914205422_6973940528165717451_n.jpg?oh=b8d1137a24122f5af7a075a526c9afeb&oe=5B17ACC3"
+        />
+
+      <!-- User comment form -->
+      <div>
+        <h1>Comments</h1>
+        <div>
+          <label for="name">Your name:</label>
+          <input id="name" type="text"><br>
+
+          <label for="email">Your email adress:</label>
+          <input id="email" type="text"><br>
+
+          <label for="comment">Comments or questions:</label>
+          <input id="comment" type="text">
+
+          <button>Submit</button>
+        </div>
+
+      </div>
+
+
+    </div>
 
 
   </body>
