@@ -1,0 +1,50 @@
+/*ENTIRE DOCUMENT*/
+
+/* set background to be dark for high contrast*/
+body {background: gray;}
+
+/* set all text to be large */
+div {font-size: x-large;}
+a {font-size: xx-large; color: lime; }
+/* style all buttons */
+button { background: black; color: lime; width: 30%; font-size: xx-large; }
+
+.pure-button-group .tab-buttons {margin-bottom: 0px; margin-top: 5px; margin-left: 5px; }
+
+/* make tab bar background silver */
+#tabs { background: silver; }
+
+/*give contents div a bit of padding*/
+#contents { padding: 10px; }
+
+/*DIALER TAB */
+
+/* style dialer buttons */
+.number-buttons { margin-left: 1px; margin-top: 1px; font-size: larger; text-align: center; color: lime; background: black; width: 170px; height: 135px; }
+
+/*dialer input box and label*/
+#dialer-box {width: 500px; font-size: larger; background: lime; color: black; font-weight: bold; }
+
+/* Dial and Clear Buttons */
+.dial-clear { width: 225px; margin: 8px; height: 85px; font-size: larger; }
+
+#dial-button {background: lime; color: black;}
+#clear-button {background: black; color: red; font-weight: bold; }
+
+/*CONTACT LIST TAB*/
+
+/*style the contacts list buttons*/
+.contactsList { width: 500px;  background: black ; outline-color:gray; color: lime; font-size: larger; }
+
+/*ADD CONTACT TAB*/
+
+.add-contact-label { font-weight: bold; font-size:larger;}
+/* make all tags with the "add-label" class name have bold text */
+.add-label { font-weight: bold; font-size: larger; }
+
+.add-form { width: 500px; font-size: larger; background: lime; font-weight: bold; color: black; }
+
+/* make the button with ID "add-reset" red */
+.add-clear { width: 250px; font-size: larger; margin: 10px;}
+#add-reset { color: red; font-weight: bold; font-size: larger; background: black; }
+#add-submit { color: black; font-weight: bold; font-size: larger; background: lime; }

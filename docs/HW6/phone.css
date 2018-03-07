@@ -1,0 +1,48 @@
+/*ENTIRE DOCUMENT*/
+
+/* style all buttons */
+button { background: gray; color: black; width: 150px;}
+
+.pure-button-group .tab-buttons {margin-bottom: 0px; margin-top: 5px; margin-left: 5px; }
+
+/* make tab bar background silver */
+#tabs { background: silver; }
+
+/*give contents div a bit of padding*/
+#contents { padding: 10px; }
+
+/*DIALER TAB */
+
+/* style dialer buttons */
+.number-buttons { margin-left: 1px; margin-top: 1px; font-size: Large; text-align: center; color: black; background: silver; width: 135px; height: 100px; }
+
+/*dialer input box and label*/
+#dialer-box {width: 400px; }
+
+/* Dial and Clear Buttons */
+.dial-clear { width: 195px; margin: 8px; height: 85px; font-size: Large; }
+
+#dial-button {background: green; }
+#clear-button {background: red; }
+
+/*CONTACT LIST TAB*/
+
+/*style the contacts list buttons*/
+.contactsList { width: 450px; height: 50px; background: white ; outline-color:gray; color: navy; font-size: Large; }
+
+/*ADD CONTACT TAB*/
+
+.add-contact-label { font-weight: bold; font-size:Large;}
+/* make all tags with the "add-label" class name have bold text */
+.add-label { font-weight: bold; font-size:150%; }
+
+.add-form { width: 400px; font-size: Large; }
+
+/* make the button with ID "add-reset" red */
+.add-clear { width: 185px; font-size: Large; margin: 10px;}
+#add-reset { background: red; }
+
+/*GESTURES TEST TAB*/
+
+#gesture-output {margin: 10px; width: 400px; font-size: Large; text-align: center;}
+#gestureBox {margin: 10px; width: 400px; height: 400px; background: silver; }
